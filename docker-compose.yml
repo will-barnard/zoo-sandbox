@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    expose:
+      - "8080"
+    networks:
+      - internal
+    depends_on:
+      - backend
+
+networks:
+  internal:
