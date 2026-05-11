@@ -1,6 +1,0 @@
-    {
-      "public_service": "frontend",
-      "public_port": 80,
-      "stateful_services": []
-    }
-    
