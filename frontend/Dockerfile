@@ -19,6 +19,6 @@
     # Expose the port the app runs on
     EXPOSE 8080
 
-    # Command to run the application
-    CMD ["npm", "run", "serve"]
+    # Command to serve the static files
+    CMD ["nginx", "-g", "daemon off;"]
     
