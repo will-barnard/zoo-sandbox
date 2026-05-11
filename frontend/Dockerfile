@@ -19,6 +19,12 @@
     # Expose the port the app runs on
     EXPOSE 8080
 
-    # Command to serve the static files
-    CMD ["nginx", "-g", "daemon off;"]
+    # Install additional dependencies for emergent gameplay simulation
+    RUN npm install --save some-gameplay-library
+
+    # Copy the new script for critter interactions and evolution
+    COPY simulate_critters.js .
+
+    # Command to run both nginx and the critter simulation script
+    CMD ["sh", "-c", "node simulate_critters.js & nginx -g 'daemon off;'"]
     
