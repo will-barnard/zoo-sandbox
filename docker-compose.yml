@@ -1,6 +1,8 @@
     services:
       frontend:
-        build: .
+        build:
+          context: ./frontend
+          dockerfile: Dockerfile
         networks:
           - internal
         environment:
