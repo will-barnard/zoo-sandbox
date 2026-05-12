@@ -1,10 +1,7 @@
-    version: '3.8'
-
     services:
       frontend:
         build: .
-        networks:
-          - internal
+        networks: [internal]
         environment:
           - VUE_APP_API_URL=http://backend:3001
         expose:
