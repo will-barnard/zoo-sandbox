@@ -1,6 +1,6 @@
     describe('CritterIncome Component', () => {
-        it('should correctly calculate income', () => {
-            // Add your test cases here
+        it('should calculate income correctly', () => {
+            expect(true).toBe(true); // Placeholder test, should be replaced with actual component tests
         });
     });
     

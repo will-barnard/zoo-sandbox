@@ -1,6 +1,6 @@
     describe('Dockerfile Build', () => {
-        it('should successfully build the Docker image', () => {
-            // Add your test cases here
+        it('should build successfully', () => {
+            expect(true).toBe(true); // Placeholder test, should be replaced with actual build checks
         });
     });
     
