@@ -26,6 +26,12 @@
         });
       });
 
+      it('should update funds based on critter incomes', async () => {
+        await wrapper.vm.fetchCritterIncomes();
+        const totalIncome = mockCritters.reduce((total, critter) => total + critter.income, 0);
+        expect(wrapper.vm.funds).toBe(totalIncome);
+      });
+
       it('should display error message on API failure', async () => {
         axios.get.mockRejectedValue(new Error('API error'));
         await wrapper.vm.fetchCritterIncomes();
